@@ -8,6 +8,14 @@ sap.ui.define(
 
     return Controller.extend("tutorial.products.controller.Products", {
 
+      onInit: function () {
+        this.addHistoryEntry({
+          title: "All Products",
+          icon: "sap-icon://product",
+          intent: "#display-uimodule"
+        }, true);
+      },
+
 
       handleListItemPress: function (oEvent) {
         var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
